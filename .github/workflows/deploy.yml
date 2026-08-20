@@ -18,6 +18,8 @@ jobs:
           gh codespace ssh \
             --codespace orange-trout-g4pqrwrxq4wxfwv75 \
             -- \
-            'cd /workspaces/codespaces-blank/my-app &&
-            git pull origin main &&
-            docker compose up -d --build'      
+            'cd /workspaces/codespaces-blank &&
+            rm -rf my-app &&
+            git clone https://github.com/imad-npm/my-app.git my-app &&
+            cd my-app &&
+            docker compose up -d --build'   
