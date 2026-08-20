@@ -18,6 +18,6 @@ jobs:
           gh codespace ssh \
             --codespace orange-trout-g4pqrwrxq4wxfwv75 \
             -- \
-            'cd /workspaces/my-app &&
+            'cd /workspaces/codespaces-blank/my-app &&
             git pull &&
             docker compose up -d --build'  
