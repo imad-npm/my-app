@@ -20,4 +20,4 @@ jobs:
             -- \
             'cd /workspaces/codespaces-blank/my-app &&
             git pull origin main &&
-            docker compose up -d --build'   
+            docker compose up -d --build'    
