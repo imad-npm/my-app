@@ -19,5 +19,5 @@ jobs:
             --codespace orange-trout-g4pqrwrxq4wxfwv75 \
             -- \
             'cd /workspaces/codespaces-blank/my-app &&
-            git pull &&
+            git pull origin main &&
             docker compose up -d --build'   
