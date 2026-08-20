@@ -13,9 +13,11 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
+          gh auth status
+
           gh codespace ssh \
             --codespace orange-trout-g4pqrwrxq4wxfwv75 \
             -- \
             'cd /workspaces/YOUR_REPO &&
-             git pull &&
-             docker compose up -d --build'
+            git pull &&
+            docker compose up -d --build'
