@@ -1,0 +1,21 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to Codespace
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          gh codespace ssh \
+            --codespace orange-trout-g4pqrwrxq4wxfwv75 \
+            -- \
+            'cd /workspaces/YOUR_REPO &&
+             git pull &&
+             docker compose up -d --build'
