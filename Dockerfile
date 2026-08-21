@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
         git \
         libzip-dev \
         zlib1g-dev \
-    && docker-php-ext-configure zip --with-libzip \
+    && docker-php-ext-configure zip  \
     && docker-php-ext-install zip pdo_mysql \
     && rm -rf /var/lib/apt/lists/*
 
